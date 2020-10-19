@@ -18,6 +18,8 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist/html'),
     //サーバー起動時にブラウザを自動的に起動
     open: true,
+    // 変更したモジュールのみ更新
+    hot: true,
     // ポート番号を変更
     port: 3000,
     // ルートディレクトリのファイルを監視
@@ -49,7 +51,7 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: { sourceMap: true },
+            // options: { sourceMap: true },
           },
           {
             loader: 'sass-loader',
