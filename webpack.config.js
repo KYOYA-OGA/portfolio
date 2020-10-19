@@ -11,6 +11,20 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'js/[name]-[hash].js',
   },
+
+  //webpack-dev-server の設定
+  devServer: {
+    //ルートディレクトリの指定
+    contentBase: path.join(__dirname, 'dist/html'),
+    //サーバー起動時にブラウザを自動的に起動
+    open: true,
+    // ポート番号を変更
+    port: 3000,
+    // ルートディレクトリのファイルを監視
+    watchContentBase: true,
+    //バンドルされたファイルを出力する（実際に書き出す）
+    writeToDisk: false,
+  },
   module: {
     rules: [
       {
