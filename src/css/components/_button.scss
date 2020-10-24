@@ -1,0 +1,49 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    height: 6rem;
+    width: 16rem;
+    display: inline-block;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: $color-secondary;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+    & a {
+      font-size: $font-default;
+      color: $color-grey-light;
+      text-decoration: none;
+      line-height: 6rem;
+      transition: all 0.5s ease-in-out;
+      z-index: 2;
+      position: relative;
+      font-weight: 600;
+    }
+  }
+
+  &__eff {
+    height: 6rem;
+    width: 16rem;
+    left: -16rem;
+    background-color: $color-grey-light;
+    position: absolute;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+  &:hover &__eff {
+    left: 0;
+  }
+
+  &:hover a {
+    color: $color-secondary;
+  }
+}
+
+.btn--hero {
+  margin-top: 3.2rem;
+}

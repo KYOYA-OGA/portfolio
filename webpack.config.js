@@ -2,6 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+// const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
   mode: 'production',
@@ -12,19 +13,15 @@ module.exports = {
     filename: 'js/[name]-[hash].js',
   },
 
-  //webpack-dev-server の設定
   devServer: {
-    //ルートディレクトリの指定
     contentBase: path.join(__dirname, 'dist/html'),
-    //サーバー起動時にブラウザを自動的に起動
+    // publicPath: '/dist/',
     open: true,
-    // 変更したモジュールのみ更新
-    hot: true,
-    // ポート番号を変更
+    // hot: true,
     port: 3000,
-    // ルートディレクトリのファイルを監視
+    useLocalIp: true,
+    host: '0.0.0.0',
     watchContentBase: true,
-    //バンドルされたファイルを出力する（実際に書き出す）
     writeToDisk: false,
   },
   module: {
@@ -59,7 +56,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg)/,
+        test: /\.(png|jpg|jpeg|svg)/,
         use: [
           {
             loader: 'file-loader',
@@ -91,5 +88,7 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin(),
+
+    // new LiveReloadPlugin(),
   ],
 };

@@ -1,0 +1,40 @@
+.feature {
+  margin: 0 auto;
+  padding: 10rem 0;
+  color: $color-grey-dark-1;
+  width: 80%;
+
+  &__container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__card {
+    width: 30rem;
+    background-color: rgba($color-tertiary, 0.2);
+    padding: 3rem;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  &__icon {
+    display: inline-block;
+    height: 10rem;
+    width: 10rem;
+
+    &--code {
+    }
+  }
+
+  &__text-box {
+  }
+
+  &__title {
+    font-size: $font-large;
+    margin-bottom: 0.5rem;
+  }
+
+  &__text {
+    font-size: $font-default;
+  }
+}
