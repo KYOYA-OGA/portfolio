@@ -1,44 +1,109 @@
 .hero {
   position: relative;
   display: flex;
-  // height: 80vh;
+  padding: 3rem 0;
   background-image: linear-gradient(
     to bottom right,
     rgba($color-primary-dark, 0.8),
     rgba($color-primary-light, 0.8)
   );
 
+  @include respond(tab-port) {
+    padding: 6rem 0;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+  }
+
   &__left {
     flex: 1;
     @include position-center();
     flex-direction: column;
     width: 80%;
-    color: $color-grey-light;
+    color: #fff;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
 
     &__title {
-      font-size: $font-mega;
+      font-size: $font-bigger;
+
+      @include respond(big-desktop) {
+        font-size: $font-mega;
+      }
+
+      @include respond(tab-land) {
+        font-size: $font-big;
+      }
+
+      @include respond(tab-port) {
+        font-size: $font-large;
+      }
     }
 
     &__text {
       font-size: $font-large;
       width: 60%;
+      & span {
+        background: linear-gradient(
+          transparent 70%,
+          $color-secondary-light 70%
+        );
+      }
+
+      @include respond(tab-land) {
+        font-size: $font-medium;
+      }
+
+      @include respond(tab-port) {
+        font-size: $font-default;
+      }
+
+      @include respond(phone) {
+        width: 75%;
+      }
     }
   }
 
   &__right {
     flex: 1;
-    width: 60rem;
+  }
+
+  &__image {
+    width: 90%;
+    margin: 0 auto;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      width: 50%;
+    }
   }
 
   &__bg-text {
-    font-size: 25rem;
+    font-size: 20rem;
     position: absolute;
-    top: -10%;
-    left: 10%;
+    top: 0;
+    left: 0%;
     opacity: 0.1;
     transform: rotate(-5deg);
     color: #fff;
-    line-height: 2;
     font-family: 'Permanent Marker', cursive;
+
+    @include respond(big-desktop) {
+      font-size: 25rem;
+    }
+
+    @include respond(tab-land) {
+      font-size: 18rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 15rem;
+    }
   }
 }

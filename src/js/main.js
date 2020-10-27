@@ -1,5 +1,4 @@
-import my from './my.js';
 import '../css/main.scss';
+import MobileMenu from './MobileMenu.js';
 
-console.log('webpack-test');
-my();
+// MobileMenu();

@@ -1,0 +1,11 @@
+.contact {
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($color-primary-dark, 0.8),
+    rgba($color-primary-light, 0.8)
+  );
+  padding-top: 6rem;
+
+  &__container {
+  }
+}

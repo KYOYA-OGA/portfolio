@@ -2,7 +2,7 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const LiveReloadPlugin = require('webpack-livereload-plugin');
+const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
   mode: 'production',
@@ -51,12 +51,20 @@ module.exports = {
             // options: { sourceMap: true },
           },
           {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [['autoprefixer', { grid: false }]],
+              },
+            },
+          },
+          {
             loader: 'sass-loader',
           },
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|svg)/,
+        test: /\.(png|jpg|jpeg|svg|ico)/,
         use: [
           {
             loader: 'file-loader',
@@ -89,6 +97,7 @@ module.exports = {
 
     new CleanWebpackPlugin(),
 
+    new HardSourceWebpackPlugin(),
     // new LiveReloadPlugin(),
   ],
 };

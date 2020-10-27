@@ -1,17 +1,17 @@
 .feature {
   margin: 0 auto;
-  padding: 10rem 0;
+  padding: 6rem 0;
   color: $color-grey-dark-1;
-  width: 80%;
 
   &__container {
     display: flex;
     justify-content: space-around;
+    padding-top: 5rem;
   }
 
   &__card {
     width: 30rem;
-    background-color: rgba($color-tertiary, 0.2);
+    border: thick double $color-primary-light;
     padding: 3rem;
     border-radius: 10px;
     text-align: center;
@@ -21,6 +21,9 @@
     display: inline-block;
     height: 10rem;
     width: 10rem;
+    padding: 1rem 1.5rem;
+    margin-top: -8rem;
+    background-color: #fff;
 
     &--code {
     }
@@ -35,6 +38,6 @@
   }
 
   &__text {
-    font-size: $font-default;
+    font-size: $font-medium;
   }
 }

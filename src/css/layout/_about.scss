@@ -1,17 +1,15 @@
 .about {
   // height: 60vh;
   margin-top: 10rem;
-  padding: 10rem;
-
+  padding: 6rem 0 10rem;
   background-image: linear-gradient(
-    to bottom,
+    to right bottom,
     rgba($color-grey-light, 1),
-    rgba($color-grey-light, 0.2)
+    rgba($color-grey-light, 0.3)
   );
 
   &__container {
     display: flex;
-    width: 80%;
     margin: 0 auto;
   }
 
@@ -28,29 +26,38 @@
 
   &__content {
     flex: 1;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     color: $color-grey-dark-1;
   }
 
   &__title {
     text-align: left;
-    font-size: $font-big;
+    font-size: $font-large;
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
 
   &__text {
     font-size: $font-medium;
-    margin-bottom: 3rem;
+  }
+
+  &__skill-container {
+    margin-top: 3rem;
+    text-align: center;
   }
 
   &__skill-title {
+    display: inline-block;
     font-size: $font-big;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    background: linear-gradient(transparent 80%, $color-primary-light 80%);
   }
 
   &__skill-box {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 }
@@ -60,7 +67,7 @@
   margin-bottom: 2rem;
 
   &:not(:last-child) {
-    margin-right: 2rem;
+    margin-right: 2.5rem;
   }
   & img {
     margin: 0 auto;

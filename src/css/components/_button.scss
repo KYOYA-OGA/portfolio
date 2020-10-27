@@ -11,11 +11,11 @@
     background-color: $color-secondary;
     text-align: center;
     cursor: pointer;
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    box-shadow: 0 10px 10px rgba($color-black, 0.2);
 
     & a {
       font-size: $font-default;
-      color: $color-grey-light;
+      color: #fff;
       text-decoration: none;
       line-height: 6rem;
       transition: all 0.5s ease-in-out;
@@ -29,7 +29,8 @@
     height: 6rem;
     width: 16rem;
     left: -16rem;
-    background-color: $color-grey-light;
+    background-color: #fff;
+    border-radius: 10px;
     position: absolute;
     transition: all 0.3s ease;
     z-index: 1;
@@ -42,8 +43,29 @@
   &:hover a {
     color: $color-secondary;
   }
-}
 
-.btn--hero {
-  margin-top: 3.2rem;
+  &--hero {
+    margin-top: 3.2rem;
+  }
+
+  &--works {
+    margin: 2rem auto;
+    height: 4rem;
+    width: 80%;
+    transition: all 0.3s ease-in-out;
+    box-shadow: none;
+    display: block;
+
+    &:hover {
+      background-color: rgba(#000, 0.05);
+      box-shadow: 0 5px 5px rgba($color-black, 0.2);
+
+      & a {
+        color: $color-secondary;
+      }
+    }
+    & a {
+      line-height: 4rem;
+    }
+  }
 }

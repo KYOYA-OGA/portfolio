@@ -1,0 +1,15 @@
+.footer {
+  &__copyright {
+    padding: 2rem 0;
+    font-size: $font-default;
+    text-align: center;
+  }
+
+  &__logo {
+    height: 1.8rem;
+    display: inline;
+    transform: translateY(2px);
+    margin-left: 5px;
+    margin-right: 3px;
+  }
+}

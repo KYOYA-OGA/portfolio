@@ -5,84 +5,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="<%= require('../images/favicon.png') %>">
+  <link rel="apple-touch-icon" sizes="180x180" href="<%= require('../images/favicon.png') %>">
   <title>KYOYA'S ポートフォリオ</title>
 </head>
 
 <body>
-  <header class="navigation">
-    <div class="navigation__icon">
-      アイコン
-    </div>
-    <nav class="navigation__nav">
-      <ul class="navigation__list">
-        <li class="navigation__item"><a href="" class="navigation__link">特徴</a></li>
-        <li class="navigation__item"><a href="" class="navigation__link">プロフィール</a></li>
-        <li class="navigation__item"><a href="" class="navigation__link">制作実績</a></li>
-        <li class="navigation__item"><a href="" class="navigation__link">お問い合わせ</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="wrapper">
 
-  <section class="hero">
-    <p class="hero__bg-text">Web<br>Dev</p>
-    <div class="hero__left">
-      <h1 class="hero__left__title">Webの力でお手伝いします</h1>
-      <p class="hero__left__text">はじめまして、小笠原と申します。「Webサイト制作を通じて皆さまの問題を解決したい」、そうした想いで日々フリーランスとして活動しています。</p>
-      <div class="btn btn--hero">
-        <div class="btn__eff"></div>
-        <a href="#">相談する</a>
-      </div>
-    </div>
-    <div class="hero__right">
-      <img src="<%= require('../images/hero_coding.svg') %>" alt="">
-    </div>
-  </section>
 
-  <section class="feature">
-    <h1 class="title-heading" data-heading="Feature">特徴</h1>
-
-    <div class="feature__container">
-
-      <div class="feature__card">
-        <img src="<%= require('../images/handshake.svg') %>" alt="" class="feature__icon">
-        <div class="feature__text-box">
-          <h2 class="feature__title">共に考える</h2>
-          <p class="feature__text">Webサイトを作りたいがどうしたらよいか分からない…。ぜひ私がお力になります。あなたのビジネスを加速させる効果的なWeb施策をご提案いたします。</p>
+    <header class="header">
+      <div class="header__container">
+        <div class="header__icon">
+          <a href="#">
+            <img src="<%= require('../images/code-logo.svg') %>" alt="kyoya dev logo" class="header__logo">
+            <span class="header__logo--text">KYOYA DEV</span>
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item"><a href="#feature" class="header__link">特徴</a></li>
+            <li class="header__item"><a href="#about" class="header__link">プロフィール</a></li>
+            <li class="header__item"><a href="#works" class="header__link">制作実績</a></li>
+            <li class="header__item"><a href="#contact" class="header__link">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <div class="header__menu-icon">
+          <div class="header__menu-icon__middle"></div>
         </div>
       </div>
+    </header>
 
-      <div class="feature__card">
-        <img src="<%= require('../images/handshake.svg') %>" alt="" class="feature__icon">
-        <div class="feature__text-box">
-          <h2 class="feature__title">もうひとつ</h2>
-          <p class="feature__text"></p>
-        </div>
-      </div>
-
-      <div class="feature__card">
-        <img src="<%= require('../images/web-code.svg') %>" alt="" class="feature__icon">
-        <div class="feature__text-box">
-          <h2 class="feature__title">確かなコーディングスキル</h2>
-          <p class="feature__text">Web制作に必要なスキルはもちろん、移り変わりの激しい業界にキャッチアップできるよう日々自己研鑽に努めています。</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <section class="about">
-    <h1 class="title-heading" data-heading="About">自己紹介</h1>
-    <div class="about__container">
-      <div class="about__image-box">
-        <img src="<%= require('../images/kyoya.jpg') %>" alt="" class="about__image">
-      </div>
-      <div class="about__content">
-        <h2 class="about__title">小笠原京也（オガサワラキョウヤと申します</h2>
-        <p class="about__text">
-          早稲田大学卒業後、大学院生、シーシャカフェ店長、リサイクル屋、リフォーム職人、営業、経理など様々な経験をつんできた結果、Web制作という天職にたどり着きました。自らの経験とスキルがお客さんの問題解決につながっていくことが何よりの喜びです。
+    <section class="hero">
+      <p class="hero__bg-text">Web</p>
+      <div class="hero__left">
+        <h1 class="hero__left__title">Webの力でお手伝いします</h1>
+        <p class="hero__left__text">
+          はじめまして、小笠原と申します。<br>「<span>Webサイト制作</span>を通じて皆さまの問題を解決したい」、そうした想いで日々フリーランスとして活動しています。
         </p>
+        <div class="btn btn--hero">
+          <div class="btn__eff"></div>
+          <a href="#">相談する</a>
+        </div>
+      </div>
+      <div class="hero__right">
+        <img src="<%= require('../images/hero_coding.svg') %>" alt="coding" class="hero__image">
+      </div>
+    </section>
 
-        <p class="about__skill-title">【対応可能言語およびスキル】</p>
+    <section class="feature" id="feature">
+      <h1 class="title-heading" data-heading="Feature">特徴</h1>
+
+      <div class="feature__container main-container">
+
+        <div class="feature__card">
+          <img src="<%= require('../images/handshake.svg') %>" alt="handshake" class="feature__icon">
+          <div class="feature__text-box">
+            <h2 class="feature__title">共に考える</h2>
+            <p class="feature__text">Webサイトを作りたいがどうしたらよいか分からない…。ぜひ私がお力になります。あなたのビジネスを加速させる効果的なWeb施策をご提案いたします。</p>
+          </div>
+        </div>
+
+        <div class="feature__card">
+          <img src="<%= require('../images/stair-up.svg') %>" alt="stair up" class="feature__icon">
+          <div class="feature__text-box">
+            <h2 class="feature__title">常に未来志向</h2>
+            <p class="feature__text">Webサイト制作は手段に過ぎません。UX/UIを意識し、達成すべき目的を常に念頭において制作を進めていきます。資産となるWebサイトをつくりあげていきましょう。
+            </p>
+          </div>
+        </div>
+
+        <div class="feature__card">
+          <img src="<%= require('../images/web-code.svg') %>" alt="web code" class="feature__icon">
+          <div class="feature__text-box">
+            <h2 class="feature__title">確かなスキル</h2>
+            <p class="feature__text">Web制作に必要なコーディングスキルはもちろん、移り変わりの激しい業界にキャッチアップできるよう日々自己研鑽に努めています。安心してお任せください。</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <h1 class="title-heading" data-heading="About">自己紹介</h1>
+      <div class="about__container main-container">
+        <div class="about__image-box">
+          <img src="<%= require('../images/kyoya.jpg') %>" alt="kyoya's photo" class="about__image">
+        </div>
+        <div class="about__content">
+          <h2 class="about__title">小笠原京也（オガサワラキョウヤ）</h2>
+          <p class="about__text">
+            早稲田大学哲学科を卒業後、大学院生、シーシャカフェ店長、リサイクル屋、リフォーム職人、営業、経理、タイ留学など様々な経験をつんできた結果、Web制作という天職にたどり着きました。猛烈に学び、誠実にアウトプットします。自らの経験とスキルがまわりの方々の問題解決につながっていくことが何よりの喜びです。どうぞよろしくお願いします。
+          </p>
+        </div>
+      </div>
+      <div class="about__skill-container main-container">
+        <p class="about__skill-title">対応可能言語およびスキル</p>
         <div class="about__skill-box">
           <div class="skill-icon">
             <img src="<%= require('../images/html.svg') %>" alt="html" width="45" height="45">
@@ -97,10 +115,6 @@
             <span>JavaScript</span>
           </div>
           <div class="skill-icon">
-            <img src="<%= require('../images/php.svg') %>" alt="PHP" width="45" height="45">
-            <span>PHP</span>
-          </div>
-          <div class="skill-icon">
             <img src="<%= require('../images/wordpress.svg') %>" alt="WordPress" width="45" height="45">
             <span>WordPress</span>
           </div>
@@ -113,6 +127,10 @@
             <span>SASS</span>
           </div>
           <div class="skill-icon">
+            <img src="<%= require('../images/github.svg') %>" alt="github" width="45" height="45">
+            <span>Github</span>
+          </div>
+          <div class="skill-icon">
             <img src="<%= require('../images/united-kingdom.svg') %>" alt="english" width="45" height="45">
             <span>英語</span>
           </div>
@@ -122,30 +140,147 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <section class="works">
-    <h1 class="title-heading" data-heading="Works">制作実績</h1>
-    <div class="works__container">
-      <h1 class="works__title">制作実績</h1>
-      <div class="works__item">
-        <img src="" alt="" class="works__image">
-        <p class="works__text">詳細を見る</p>
+
+    </section>
+
+    <section class="works" id="works">
+      <h1 class="title-heading" data-heading="Works">制作実績</h1>
+      <div class="works__container main-container">
+
+        <!-- Natours -->
+        <div class="works__item">
+          <a href="https://natours-oga.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="<%= require('../images/natours-l.png') %>" media="(min-width: 1200px)">
+              <source srcset="<%= require('../images/natours-m.png') %>" media="(min-width: 947px)">
+              <source srcset="<%= require('../images/natours-s.png') %>" media="(min-width: 600px)">
+              <img srcset="<%= require('../images/natours-l.png') %>" alt="isaraLP" class="works__image">
+            </picture>
+          </a>
+          <h2 class="works__title">＜Natours＞</h2>
+          <p class="works__description">Jonas
+            Schmedtmann氏のコースの題材となります。躍動感と遊び心に溢れたLPで、すべてのアニメーションがCSSで作られています。ぜひ様々なアクションをお試しください。</p>
+          <div class="btn btn--works">
+            <a href="https://natours-oga.netlify.app/" target="_blank" rel="noopener noreferrer">Webサイトで確認する</a>
+          </div>
+          <div class="btn btn--works">
+            <a href="https://github.com/KYOYA-OGA/Natours" target="_blank" rel="noopener noreferrer">Githubでコードを確認する</a>
+          </div>
+        </div>
+
+        <!-- iSARA -->
+        <div class="works__item">
+          <a href="<%= require('../images/isara.life模写制作.png') %>" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="<%= require('../images/iSara-l.png') %>" media="(min-width: 1200px)">
+              <source srcset="<%= require('../images/iSara-m.png') %>" media="(min-width: 839px)">
+              <source srcset="<%= require('../images/iSara-s.png') %>" media="(min-width: 600px)">
+              <img srcset="<%= require('../images/iSara-l.png') %>" alt="isaraLP" class="works__image">
+            </picture>
+          </a>
+          <h2 class="works__title">＜isara.life模写制作LP＞</h2>
+          <p class="works__description">
+            バンコクでノマドエンジニア講座を開催しているiSARA様のLPの模写となります。LPの見本となるような記事構成で、CSSフレームワークはBootstrapを使用して作成しています。
+          </p>
+          <p class="works__description"><a href="http://isara.life/" target="_blank"
+              rel="noopener noreferrer">模写元ページ(http://isara.life/)はこちら<img class="link-opener"
+                src="<%= require('../images/open-external-link.svg') %>" alt="open external link icon" width="12"
+                height="12"></a>
+          </p>
+          <div class="btn btn--works">
+            <a href="<%= require('../images/isara.life模写制作.png') %>" target="_blank"
+              rel="noopener noreferrer">全体を確認する</a>
+          </div>
+        </div>
+
+        <!-- Fiction University -->
+        <div class="works__item">
+          <a href="http://kyoyao.sgedu.site/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="<%= require('../images/fictional-university-l.png') %>" media="(min-width: 1200px)">
+              <source srcset="<%= require('../images/fictional-university-m.png') %>" media="(min-width: 947px)">
+              <source srcset="<%= require('../images/fictional-university-s.png') %>" media="(min-width: 600px)">
+              <img srcset="<%= require('../images/fictional-university-l.png') %>" alt="isaraLP" class="works__image">
+            </picture>
+          </a>
+          <h2 class="works__title">＜Fictional University＞</h2>
+          <p class="works__description">Brad
+            Schiff氏のコースの題材で、WordPressにて構築されています。完全オリジナルテーマで、カスタムクエリやカスタム投稿タイプのみならず、GoogleマップAPIとの連携やJavaScriptとWordPress
+            REST APIを組み合わせたライブサーチなどを実装しています。</p>
+          <div class="btn btn--works">
+            <a href="http://kyoyao.sgedu.site/" target="_blank" rel="noopener noreferrer">Webサイトで確認する</a>
+          </div>
+        </div>
+
+        <!-- つつじの会 -->
+        <div class="works__item">
+          <a href="#">
+            <picture>
+              <source srcset="<%= require('../images/tsutsuji-l.png') %>" media="(min-width: 1200px)">
+              <source srcset="<%= require('../images/tsutsuji-m.png') %>" media="(min-width: 947px)">
+              <source srcset="<%= require('../images/tsutsuji-s.png') %>" media="(min-width: 600px)">
+              <img srcset="<%= require('../images/tsutsuji-l.png') %>" alt="isaraLP" class="works__image">
+            </picture>
+          </a>
+          <h2 class="works__title">＜つつじの会＞</h2>
+          <p class="works__description">
+            デザインからコーディングまでのすべての工程を担当しました。インターネットに慣れていない方でも迷わないようナビゲーションボタンを随所に配置し、シンプルなデザインを心がけました。担当者の方が自身で更新できるようWordPressで構築しています。
+          </p>
+          <div class="btn btn--works">
+            <a href="<%= require('../images/tsutsuji_full-l.png') %>" target="_blank"
+              rel="noopener noreferrer">全体を確認する</a>
+          </div>
+          <div class="btn btn--works">
+            <a href="#">公開準備中です</a>
+          </div>
+        </div>
+
+
+        <!-- OGA DEV -->
+        <div class="works__item">
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="<%= require('../images/natours-l.png') %>" media="(min-width: 1200px)">
+              <source srcset="<%= require('../images/natours-m.png') %>" media="(min-width: 947px)">
+              <source srcset="<%= require('../images/natours-s.png') %>" media="(min-width: 600px)">
+              <img srcset="<%= require('../images/natours-l.png') %>" alt="isaraLP" class="works__image">
+            </picture>
+          </a>
+          <h2 class="works__title">＜OGA DEV＞</h2>
+          <p class="works__description">
+            当サイトです。デザインからコーディングまですべての工程を担当しました。ポートフォリオサイトとして王道のサイト構成を踏襲しつつ、人となりとスキルが伝わるよう設計しました。これからもさらなる改善に努めていく予定です
+          </p>
+          <div class="btn btn--works">
+            <a href="https://github.com/KYOYA-OGA/portfolio" target="_blank"
+              rel="noopener noreferrer">Githubでコードを確認する</a>
+          </div>
+        </div>
+
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="contact">
-    <h1 class="title-heading" data-heading="Contact">コンタクト</h1>
-    google form埋め込む
-  </section>
 
-  <footer>
-    <p class="footer__copyright">
-      &copy; 2020　キョウヤ
-    </p>
-  </footer>
+    <section class="contact" id="contact">
+      <h1 class="title-heading text-white" data-heading="Contact">コンタクト</h1>
+      <div class="main-container contact__container">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSex4GyLU8oCG6rT68ZufV3dhIfnYdBSEWsmcLgQ4wdrMscFOA/viewform?embedded=true"
+          width="100%" height="800px" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="main-container footer__container">
+        <p class="footer__copyright">
+          &copy; 2020 <img src="<%= require('../images/code-logo.svg') %>" alt="kyoya dev logo"
+            class="footer__logo">KYOYA-DEV
+        </p>
+      </div>
+    </footer>
+
+
+  </div>
 </body>
 
 </html>
