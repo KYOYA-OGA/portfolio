@@ -1,16 +1,14 @@
 .header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  height: 70px;
+  position: fixed;
+  z-index: 140;
+  width: 100%;
+  height: 60px;
   background-color: #fff;
 
-  @include respond(tab-port) {
-    height: 50px;
-  }
   &__container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     margin: 0 auto;
 
@@ -20,27 +18,14 @@
   }
 
   &__icon {
-    line-height: 70px;
+    height: 60px;
+    @include position-center();
 
-    @include respond(tab-port) {
-      line-height: 50px;
-    }
-
-    & a {
-      text-decoration: none;
-      color: $color-grey-dark-1;
-    }
-  }
-
-  &__logo {
-    height: 3.2rem;
-    width: 3.2rem;
-    display: inline-block;
-    transform: translateY(3px);
-    margin-right: 3px;
-
-    &--text {
-      font-size: $font-big;
+    &--image {
+      height: 50px;
+      @include respond(phone) {
+        height: 30px;
+      }
     }
   }
 
@@ -54,24 +39,28 @@
     display: flex;
     font-size: $font-medium;
     font-weight: 600;
+
+    @include respond(tab-land) {
+      font-size: $font-default;
+    }
   }
 
   &__item {
-    line-height: 70px;
+    line-height: 60px;
     display: inline-block;
-
-    @include respond(tab-port) {
-      line-height: 50px;
-    }
 
     &:not(:last-child) {
       margin-right: 5rem;
+
+      @include respond(tab-land) {
+        margin-right: 4rem;
+      }
     }
   }
 
   &__link {
     text-decoration: none;
-    color: $color-grey-dark-1;
+    color: $color-grey-dark-2;
     position: relative;
 
     &::after {
@@ -95,13 +84,12 @@
   //ハンバーガーメニュー
 
   &__menu-icon {
-    border-radius: 50%;
+    border-radius: 10px;
     width: 60px;
     height: 60px;
     position: fixed;
-    background-color: $color-grey-light;
-    top: 10px;
-    right: 20px;
+    top: 0;
+    right: 0;
     z-index: 11;
     transition: transform 0.3s ease-in-out;
     z-index: 200;
@@ -118,9 +106,9 @@
       left: 15px;
       width: 30px;
       height: 3px;
-      background-color: $color-grey-dark-1;
+      background-color: #5e5e5d;
       transform-origin: 0 0;
-      transition: transform 0.3s ease-out;
+      transition: all 0.3s ease-out;
     }
 
     &__middle {
@@ -129,7 +117,7 @@
       left: 15px;
       width: 30px;
       height: 3px;
-      background-color: $color-grey-dark-1;
+      background-color: #5e5e5d;
       transition: all 0.3s ease-out;
       transform-origin: 0 50%;
     }
@@ -141,78 +129,94 @@
       left: 15px;
       width: 30px;
       height: 3px;
-      background-color: $color-grey-dark-1;
+      background-color: #5e5e5d;
       transform-origin: 0 100%;
-      transition: transform 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+
+    &--close {
+      &::before {
+        background-color: #fff;
+        transform: rotate(45deg) scaleX(1.25) translateY(-4px);
+      }
+
+      .header__menu-icon__middle {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      &::after {
+        z-index: 300;
+        background-color: #fff;
+        transform: rotate(-45deg) scaleX(1.25) translateY(3px);
+      }
     }
   }
 
-  // &__menu-icon--close {
-  //   &::before {
-  //     transform: rotate(45deg) scaleX(1.25) translateY(-4px);
-  //   }
+  &__drawer__bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: $color-grey-dark-1;
+    z-index: -150;
+    position: fixed;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
 
-  //   .header__menu-icon__middle {
-  //     opacity: 0;
-  //     transform: scaleX(0);
-  //   }
+    &--visible {
+      z-index: 150;
+      opacity: 0.8;
+      visibility: visible;
+    }
+  }
 
-  //   &::after {
-  //     transform: rotate(-45deg) scaleX(1.25) translateY(3px);
-  //   }
-  // }
+  &__drawer {
+    padding-top: 9rem;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    height: 100%;
+    background-color: $color-grey-dark-1;
+    // transform: translateX(100%);
+    transition: all 0.3s ease-in-out;
+    z-index: -100;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
 
-  // &__drawer {
-  //   padding-top: 9rem;
-  //   z-index: 100;
-  //   position: fixed;
-  //   top: 0;
-  //   right: 0;
-  //   width: 150px;
-  //   height: 100%;
-  //   background-color: $color-grey-dark-1;
-  //   // transform: translateX(100%);
-  //   transition: all 0.3s ease-in-out;
-  //   z-index: -100;
-  //   opacity: 0;
-  //   visibility: hidden;
+    @include respond(phone) {
+    }
 
-  //   &__bg {
-  //     width: 100vw;
-  //     height: 100vh;
-  //     background-color: $color-grey-dark-1;
-  //     z-index: 150;
-  //     position: fixed;
-  //     left: 0;
-  //     top: 0;
-  //     opacity: 0;
-  //     visibility: hidden;
+    &--visible {
+      opacity: 1;
+      z-index: 151;
+      visibility: visible;
+      transform: translateX(0);
+    }
 
-  //     &--visible {
-  //       opacity: 0.8;
-  //       visibility: visible;
-  //     }
-  //   }
+    &__list {
+      font-size: $font-medium;
+      text-align: center;
 
-  //   &--visible {
-  //     opacity: 1;
-  //     z-index: 151;
-  //     visibility: visible;
-  //   }
+      @include respond(phone) {
+        font-size: $font-default;
+      }
+    }
 
-  //   &__list {
-  //     list-style: none;
-  //   }
+    &__item {
+      display: block;
+      padding: 1.6rem;
+    }
 
-  //   &__item {
-  //     display: block;
-  //     padding: 1.6rem;
-  //   }
-
-  //   &__link {
-  //     color: #fff;
-  //   }
-  // }
+    &__link {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
 }
 
 .stop-scrolling {

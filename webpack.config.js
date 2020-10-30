@@ -10,7 +10,7 @@ module.exports = {
   entry: './src/js/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'js/[name]-[hash].js',
+    filename: 'js/[name]-[contenthash].js',
   },
 
   devServer: {
@@ -48,7 +48,7 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            // options: { sourceMap: true },
+            options: { sourceMap: true },
           },
           {
             loader: 'postcss-loader',
@@ -64,13 +64,14 @@ module.exports = {
         ],
       },
       {
-        test: /\.(png|jpg|jpeg|svg|ico)/,
+        test: /\.(jpe?g|png|gif|svg|ico)(\?.+)?$/,
+        include: path.resolve(__dirname, 'src/images'),
         use: [
           {
             loader: 'file-loader',
             options: {
               esModule: false,
-              name: 'images/[name]-[hash].[ext]',
+              name: 'images/[name]-[contenthash].[ext]',
             },
           },
           {
@@ -88,7 +89,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: './css/[name]-[hash].css',
+      filename: './css/[name]-[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       template: './src/templates/index.html',
@@ -98,6 +99,5 @@ module.exports = {
     new CleanWebpackPlugin(),
 
     new HardSourceWebpackPlugin(),
-    // new LiveReloadPlugin(),
   ],
 };

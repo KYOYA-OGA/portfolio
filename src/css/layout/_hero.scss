@@ -1,5 +1,8 @@
 .hero {
   position: relative;
+  margin-top: 60px;
+  padding-top: -60px;
+  position: relative;
   display: flex;
   padding: 3rem 0;
   background-image: linear-gradient(
@@ -9,11 +12,12 @@
   );
 
   @include respond(tab-port) {
-    padding: 6rem 0;
+    padding: 10rem 0;
   }
 
   @include respond(phone) {
     flex-direction: column;
+    padding: 4.5rem 0;
   }
 
   &__left {
@@ -27,8 +31,13 @@
       width: 100%;
     }
 
+    @include respond(phone) {
+      text-align: center;
+    }
+
     &__title {
       font-size: $font-bigger;
+      margin-bottom: 5px;
 
       @include respond(big-desktop) {
         font-size: $font-mega;
@@ -39,6 +48,10 @@
       }
 
       @include respond(tab-port) {
+        font-size: $font-large;
+      }
+
+      @include respond(phone) {
         font-size: $font-large;
       }
     }
@@ -59,6 +72,7 @@
 
       @include respond(tab-port) {
         font-size: $font-default;
+        width: 75%;
       }
 
       @include respond(phone) {
@@ -75,12 +89,21 @@
     width: 90%;
     margin: 0 auto;
 
+    @include respond(phone) {
+      position: relative;
+    }
+
     @include respond(tab-port) {
-      width: 100%;
+      width: 90%;
     }
 
     @include respond(phone) {
-      width: 50%;
+      width: 60%;
+      opacity: 0.6;
+      margin-top: 2rem;
+      // position: absolute;
+      // top: 50%;
+      // left: 70%;
     }
   }
 
@@ -104,6 +127,16 @@
 
     @include respond(tab-port) {
       font-size: 15rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  &__br {
+    @include respond(tab-land) {
+      display: none;
     }
   }
 }

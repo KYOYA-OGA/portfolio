@@ -1,16 +1,22 @@
 .about {
-  // height: 60vh;
-  margin-top: 10rem;
-  padding: 6rem 0 10rem;
+  padding: 6rem 0;
   background-image: linear-gradient(
     to right bottom,
     rgba($color-grey-light, 1),
     rgba($color-grey-light, 0.3)
   );
 
+  @include respond(tab-port) {
+    padding: 4rem 1rem 4rem;
+  }
+
   &__container {
     display: flex;
     margin: 0 auto;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__image-box {
@@ -19,9 +25,16 @@
   }
 
   &__image {
-    width: 35rem;
-    // border: 10px solid $color-grey-dark-1;
+    max-width: 35rem;
     border-radius: 50%;
+
+    @include respond(tab-land) {
+      max-width: 30rem;
+    }
+
+    @include respond(tab-port) {
+      max-width: 25rem;
+    }
   }
 
   &__content {
@@ -30,6 +43,10 @@
     flex-direction: column;
     justify-content: center;
     color: $color-grey-dark-1;
+
+    @include respond(phone) {
+      align-items: center;
+    }
   }
 
   &__title {
@@ -37,10 +54,22 @@
     font-size: $font-large;
     margin-top: 2rem;
     margin-bottom: 1rem;
+
+    @include respond(tab-port) {
+      font-size: $font-medium;
+    }
   }
 
   &__text {
     font-size: $font-medium;
+
+    @include respond(tab-land) {
+      width: 90%;
+    }
+
+    @include respond(tab-port) {
+      font-size: $font-default;
+    }
   }
 
   &__skill-container {
@@ -53,12 +82,25 @@
     font-size: $font-big;
     margin-bottom: 2.5rem;
     background: linear-gradient(transparent 80%, $color-primary-light 80%);
+
+    @include respond(tab-land) {
+      font-size: $font-large;
+    }
+
+    @include respond(tab-port) {
+      font-size: $font-medium;
+    }
   }
 
   &__skill-box {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+
+    @include respond(phone) {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -66,10 +108,35 @@
   font-size: $font-large;
   margin-bottom: 2rem;
 
+  @include respond(tab-land) {
+    font-size: $font-medium;
+  }
+
+  @include respond(tab-port) {
+    font-size: $font-default;
+  }
+
   &:not(:last-child) {
     margin-right: 2.5rem;
   }
   & img {
+    width: 45px;
+    height: 45px;
     margin: 0 auto;
+
+    @include respond(tab-land) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @include respond(tab-port) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @include respond(phone) {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

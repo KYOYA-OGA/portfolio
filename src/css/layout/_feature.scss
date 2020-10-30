@@ -1,20 +1,42 @@
 .feature {
   margin: 0 auto;
-  padding: 6rem 0;
+  padding: 6rem 0 8rem;
   color: $color-grey-dark-1;
+
+  @include respond(tab-port) {
+    padding: 4rem 1rem 6rem;
+  }
 
   &__container {
     display: flex;
     justify-content: space-around;
-    padding-top: 5rem;
+    flex-wrap: wrap;
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__card {
-    width: 30rem;
+    max-width: 30rem;
     border: thick double $color-primary-light;
     padding: 3rem;
     border-radius: 10px;
     text-align: center;
+    margin-top: 6rem;
+
+    @include respond(tab-land) {
+      width: 28rem;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+
+      &:first-child {
+        margin-top: 3rem;
+      }
+    }
   }
 
   &__icon {
@@ -25,7 +47,9 @@
     margin-top: -8rem;
     background-color: #fff;
 
-    &--code {
+    @include respond(phone) {
+      height: 8rem;
+      width: 8rem;
     }
   }
 
@@ -35,9 +59,17 @@
   &__title {
     font-size: $font-large;
     margin-bottom: 0.5rem;
+
+    @include respond(tab-port) {
+      font-size: $font-medium;
+    }
   }
 
   &__text {
     font-size: $font-medium;
+
+    @include respond(tab-port) {
+      font-size: $font-default;
+    }
   }
 }

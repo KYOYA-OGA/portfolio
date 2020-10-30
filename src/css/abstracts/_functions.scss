@@ -2,3 +2,16 @@
   max-width: 112rem;
   margin: 0 auto;
 }
+
+.reveal-item {
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+
+  @media all and (-ms-high-contrast: none) {
+    opacity: 1;
+  }
+
+  &--visible {
+    opacity: 1;
+  }
+}

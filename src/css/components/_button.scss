@@ -13,8 +13,13 @@
     cursor: pointer;
     box-shadow: 0 10px 10px rgba($color-black, 0.2);
 
+    @include respond(tab-port) {
+      height: 5rem;
+      width: 15rem;
+    }
+
     & a {
-      font-size: $font-default;
+      font-size: $font-medium;
       color: #fff;
       text-decoration: none;
       line-height: 6rem;
@@ -22,6 +27,11 @@
       z-index: 2;
       position: relative;
       font-weight: 600;
+
+      @include respond(tab-port) {
+        line-height: 5rem;
+        font-size: $font-default;
+      }
     }
   }
 
@@ -34,6 +44,12 @@
     position: absolute;
     transition: all 0.3s ease;
     z-index: 1;
+
+    @include respond(tab-port) {
+      height: 5rem;
+      width: 15rem;
+      left: -15rem;
+    }
   }
 
   &:hover &__eff {
