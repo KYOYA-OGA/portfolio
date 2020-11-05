@@ -193,7 +193,7 @@
 
         <!-- つつじの会 -->
         <!-- <div class="works__item">
-          <a href="#">
+          <a href="<%= require('../images/tsutsuji_full-l.png') %>">
             <picture>
               <source srcset="<%= require('../images/tsutsuji-l.png') %>" media="(min-width: 1200px)">
               <source srcset="<%= require('../images/tsutsuji-m.png') %>" media="(min-width: 947px)">
@@ -209,10 +209,31 @@
             <a href="<%= require('../images/tsutsuji_full-l.png') %>" target="_blank"
               rel="noopener noreferrer">全体を確認する</a>
           </div>
-          <div class="btn btn--works">
+          <div class="btn btn--works btn--dark">
             <a href="#">公開準備中です</a>
           </div>
-        </div>  -->
+        </div> -->
+
+        <!-- Nexter -->
+        <div class="works__item">
+          <a href="https://nexter-demo.netlify.app/" target="_blank" rel="noopener noreferrer">
+            <picture>
+              <source srcset="<%= require('../images/nexter-top-l.png') %>" media="(min-width: 1200px)">
+              <source srcset="<%= require('../images/nexter-top-m.png') %>" media="(min-width: 947px)">
+              <source srcset="<%= require('../images/nexter-top-s.png') %>" media="(min-width: 600px)">
+              <img srcset="<%= require('../images/nexter-top-m.png') %>" alt="nexterトップ画像" class="works__image">
+            </picture>
+          </a>
+          <h2 class="works__title">＜Nexter＞</h2>
+          <p class="works__description">Jonas
+            Schmedtmann氏のコースの題材となります。特徴的な写真の散りばめはCSSグリッドを用いることで可能にしています。シンプルながらもラグジュアリー感を演出する実装です。</p>
+          <div class="btn btn--works">
+            <a href="https://nexter-demo.netlify.app/" target="_blank" rel="noopener noreferrer">Webサイトで確認する</a>
+          </div>
+          <div class="btn btn--works">
+            <a href="https://github.com/KYOYA-OGA/Nexter" target="_blank" rel="noopener noreferrer">Githubでコードを確認する</a>
+          </div>
+        </div>
 
         <!-- Natours -->
         <div class="works__item">
