@@ -17,6 +17,7 @@
   <link rel="icon" type="image/x-icon" href="<%= require('../images/favicon.png') %>">
   <link rel="apple-touch-icon" sizes="180x180" href="<%= require('../images/favicon.png') %>">
   <title>KYOYA DEV PORTFOLIO</title>
+  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
 </head>
 
 <body>
@@ -116,7 +117,7 @@
         <div class="about__content">
           <h2 class="about__title">小笠原京也（オガサワラキョウヤ）</h2>
           <p class="about__text">
-            早稲田大学哲学科を卒業後、大学院生、シーシャカフェ店長、リサイクル屋、リフォーム職人、中小工務店の営業/経理、タイ留学など様々な経験をつんできた結果、Web制作という答えにたどり着きました。猛烈に学び、誠実にアウトプットします。自らの経験とスキルをまわりの方々の問題解決につなげていければ幸いです。1988年生まれ。宮城県育ち。現在はタイを拠点に生活しております（ただいま日本に帰国中）。
+            早稲田大学哲学科を卒業後、大学院生、シーシャカフェ店長、リサイクル屋、リフォーム職人、中小工務店の営業/経理、タイ留学など様々な経験をつんできた結果、Web制作という答えにたどり着きました。猛烈に学び、誠実にアウトプットします。自らの経験とスキルをまわりの方々の問題解決につなげていければ幸いです。1988年生まれ。宮城県育ち。タイを拠点に生活すべく奮闘中です（ただいま日本に帰国中）。
           </p>
         </div>
       </div>
@@ -308,9 +309,47 @@
       <h1 class="title-heading text-white" data-heading="Contact">コンタクト</h1>
       <div class="main-container contact__container">
         <p class="contact__text">お仕事のご依頼はこちらからどうぞ</p>
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSex4GyLU8oCG6rT68ZufV3dhIfnYdBSEWsmcLgQ4wdrMscFOA/viewform?embedded=true"
-          frameborder="0" marginheight="0" marginwidth="0" class="contact__form">読み込んでいます…</iframe>
+
+        <!-- class, action, methodを変更しないでください -->
+        <form class="formrun contact__form" action="https://form.run/api/v1/r/dvclni9ua0q5jpc3cw7hehyy" method="post"
+          data-formrun-saving="true">
+          <!-- ↓自由に要素を追加・編集することができます -->
+          <div class="contact__box">
+            <label class="contact__label"> <span class="contact__must">必須</span> お名前</label>
+            <input name="お名前" type="text" class="contact__input" data-formrun-required>
+            <div data-formrun-show-if-error="お名前">お名前を入力してください</div>
+          </div>
+
+          <div class="contact__box">
+            <label class="contact__label"><span class="contact__must">必須</span> メールアドレス</label>
+            <input name="メールアドレス" type="text" data-formrun-type="email" data-formrun-required class="contact__input">
+            <div data-formrun-show-if-error="メールアドレス">メールアドレスを正しく入力してください</div>
+          </div>
+
+          <div class="contact__box">
+            <label class="contact__label"><span class="contact__option">任意</span> お問い合わせ</label>
+            <textarea name="お問い合わせ" class="contact__input contact__input-area"></textarea>
+            <!-- <div data-formrun-show-if-error="お問い合わせ">お問い合わせを入力してください</div> -->
+          </div>
+
+          <!-- ボット投稿をブロックするためのタグ -->
+          <div class="_formrun_gotcha">
+            <style media="screen">
+              ._formrun_gotcha {
+                position: absolute !important;
+                height: 1px;
+                width: 1px;
+                overflow: hidden;
+              }
+            </style>
+            <label for="_formrun_gotcha">If you are a human, ignore this field</label>
+            <input type="text" name="_formrun_gotcha" id="_formrun_gotcha" tabindex="-1">
+          </div>
+
+          <button type="submit" data-formrun-error-text="未入力の項目があります" data-formrun-submitting-text="送信中..."
+            class="btn btn--contact">送信</button>
+        </form>
+
       </div>
     </section>
 

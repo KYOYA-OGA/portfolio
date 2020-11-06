@@ -72,7 +72,8 @@
     box-shadow: none;
     display: block;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: rgba(#000, 0.05);
       box-shadow: 0 5px 5px rgba($color-black, 0.2);
 
@@ -87,5 +88,32 @@
 
   &--dark {
     background-color: $color-grey-light;
+  }
+
+  &--contact {
+    font-size: $font-medium;
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    font-weight: 600;
+    height: auto;
+    padding: 1rem;
+    box-shadow: 0 5px 5px rgba($color-black, 0.2);
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      font-size: $font-default;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #fff;
+
+      box-shadow: 0 10px 10px rgba($color-black, 0.2);
+      color: $color-secondary;
+      transform: scale(1.05);
+    }
   }
 }
