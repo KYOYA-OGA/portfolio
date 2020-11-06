@@ -81,7 +81,7 @@
     display: inline-block;
     font-size: $font-big;
     margin-bottom: 2.5rem;
-    background: linear-gradient(transparent 80%, $color-primary-light 80%);
+    background: linear-gradient(transparent 90%, $color-primary-light 90%);
 
     @include respond(tab-land) {
       font-size: $font-large;

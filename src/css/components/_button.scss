@@ -94,10 +94,11 @@
     font-size: $font-medium;
     color: #fff;
     transition: all 0.3s ease-in-out;
-    font-weight: 600;
+    font-weight: bold;
     height: auto;
     padding: 1rem;
     box-shadow: 0 5px 5px rgba($color-black, 0.2);
+    width: 100%;
 
     @include respond(tab-port) {
       width: 100%;
