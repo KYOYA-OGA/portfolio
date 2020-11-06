@@ -95,6 +95,10 @@ module.exports = {
       template: './src/templates/index.html',
       filename: 'index.html',
     }),
+    new HtmlWebpackPlugin({
+      template: './src/templates/thanks.html',
+      filename: 'thanks.html',
+    }),
 
     new CleanWebpackPlugin(),
 

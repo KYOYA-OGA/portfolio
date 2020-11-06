@@ -1,0 +1,25 @@
+.thanks {
+  height: 100vh;
+  background-image: linear-gradient(
+    to bottom right,
+    rgba($color-primary-dark, 0.8),
+    rgba($color-primary-light, 0.8)
+  );
+  text-align: center;
+  @include position-center();
+
+  &__text {
+    width: 60%;
+    margin: 0 auto;
+    font-size: $font-medium;
+    color: #fff;
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      font-size: $font-default;
+    }
+  }
+}

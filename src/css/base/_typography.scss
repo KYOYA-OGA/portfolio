@@ -41,6 +41,16 @@ body {
   @include respond(phone) {
     font-size: $font-big;
   }
+
+  &--thanks {
+    @include respond(tab-port) {
+      font-size: $font-big;
+    }
+
+    @include respond(phone) {
+      font-size: $font-large;
+    }
+  }
 }
 
 .text-white {
