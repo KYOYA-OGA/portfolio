@@ -22,4 +22,12 @@
       font-size: $font-default;
     }
   }
+
+  &__br {
+    display: none;
+
+    @include respond(phone) {
+      display: block;
+    }
+  }
 }

@@ -50,6 +50,12 @@ body {
     @include respond(phone) {
       font-size: $font-large;
     }
+
+    &::before {
+      @include respond(tab-port) {
+        margin-bottom: -2rem;
+      }
+    }
   }
 }
 
