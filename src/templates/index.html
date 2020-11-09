@@ -17,7 +17,9 @@
   <link rel="icon" type="image/x-icon" href="<%= require('../images/favicon.png') %>">
   <link rel="apple-touch-icon" sizes="180x180" href="<%= require('../images/favicon.png') %>">
   <title>KYOYA DEV PORTFOLIO</title>
-  <script src="https://sdk.form.run/js/v2/formrun.js"></script>
+  <meta name="description" content="ノマドWeb制作フリーランスKYOYA DEVのポートフォリオサイトです">
+  <script src=" https://sdk.form.run/js/v2/formrun.js">
+  </script>
 </head>
 
 <body>
@@ -27,7 +29,7 @@
       <div class="header__container">
         <div class="header__icon">
           <a href="#">
-            <img src="<%= require('../images/kyoya_dev_icon.png') %>" alt="kyoya dev logo" class="header__icon--image">
+            <img src="<%= require('../images/kyoya_dev_icon.jpg') %>" alt="kyoya dev logo" class="header__icon--image">
           </a>
         </div>
         <nav class="header__nav">
@@ -172,13 +174,9 @@
         <!-- KYOYA DEV -->
         <div class="works__item">
           <a href="" target="_blank" rel="noopener noreferrer">
-            <picture>
-              <source srcset="<%= require('../images/KYOYA-DEV-PORTFOLIO-l.png') %>" media="(min-width: 1200px)">
-              <source srcset="<%= require('../images/KYOYA-DEV-PORTFOLIO-m.png') %>" media="(min-width: 919px)">
-              <source srcset="<%= require('../images/KYOYA-DEV-PORTFOLIO-s.png') %>" media="(min-width: 600px)">
-              <img srcset="<%= require('../images/KYOYA-DEV-PORTFOLIO-m.png') %>" alt="KYOYA DEV画像"
-                class="works__image">
-            </picture>
+            <figure>
+              <img src="<%= require('../images/KYOYA-DEV-PORTFOLIO-s.jpg') %>" alt="KYOYA DEV画像" class="works__image">
+            </figure>
           </a>
           <h2 class="works__title">＜OGA DEV＞</h2>
           <p class="works__description">
@@ -191,38 +189,13 @@
           </div>
         </div>
 
-        <!-- つつじの会 -->
-        <!-- <div class="works__item">
-          <a href="<%= require('../images/tsutsuji_full-l.png') %>">
-            <picture>
-              <source srcset="<%= require('../images/tsutsuji-l.png') %>" media="(min-width: 1200px)">
-              <source srcset="<%= require('../images/tsutsuji-m.png') %>" media="(min-width: 947px)">
-              <source srcset="<%= require('../images/tsutsuji-s.png') %>" media="(min-width: 600px)">
-              <img srcset="<%= require('../images/tsutsuji-l.png') %>" alt="isaraLP" class="works__image">
-            </picture>
-          </a>
-          <h2 class="works__title">＜つつじの会＞</h2>
-          <p class="works__description">
-            デザインからコーディングまでのすべての工程を担当しました。インターネットに慣れていない方でも迷わないようナビゲーションボタンを随所に配置し、シンプルなデザインを心がけました。担当者の方が自身で更新できるようWordPressで構築しています。
-          </p>
-          <div class="btn btn--works">
-            <a href="<%= require('../images/tsutsuji_full-l.png') %>" target="_blank"
-              rel="noopener noreferrer">全体を確認する</a>
-          </div>
-          <div class="btn btn--works btn--dark">
-            <a href="#">公開準備中です</a>
-          </div>
-        </div> -->
 
         <!-- Nexter -->
         <div class="works__item">
           <a href="https://nexter-demo.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <picture>
-              <source srcset="<%= require('../images/nexter-top-l.png') %>" media="(min-width: 1200px)">
-              <source srcset="<%= require('../images/nexter-top-m.png') %>" media="(min-width: 947px)">
-              <source srcset="<%= require('../images/nexter-top-s.png') %>" media="(min-width: 600px)">
-              <img srcset="<%= require('../images/nexter-top-m.png') %>" alt="nexterトップ画像" class="works__image">
-            </picture>
+            <figure>
+              <img src="<%= require('../images/nexter-top-s.jpg') %>" alt="nexterトップ画像" class="works__image">
+            </figure>
           </a>
           <h2 class="works__title">＜Nexter＞</h2>
           <p class="works__description">Jonas
@@ -238,12 +211,9 @@
         <!-- Natours -->
         <div class="works__item">
           <a href="https://natours-oga.netlify.app/" target="_blank" rel="noopener noreferrer">
-            <picture>
-              <source srcset="<%= require('../images/natours-l.png') %>" media="(min-width: 1200px)">
-              <source srcset="<%= require('../images/natours-m.png') %>" media="(min-width: 947px)">
-              <source srcset="<%= require('../images/natours-s.png') %>" media="(min-width: 600px)">
-              <img srcset="<%= require('../images/natours-m.png') %>" alt="natour画像" class="works__image">
-            </picture>
+            <figure>
+              <img src="<%= require('../images/natours-s.jpg') %>" alt="natour画像" class="works__image">
+            </figure>
           </a>
           <h2 class="works__title">＜Natours＞</h2>
           <p class="works__description">Jonas
@@ -258,13 +228,10 @@
 
         <!-- iSARA -->
         <div class="works__item">
-          <a href="<%= require('../images/isara.life模写制作.png') %>" target="_blank" rel="noopener noreferrer">
-            <picture>
-              <source srcset="<%= require('../images/iSara-l.png') %>" media="(min-width: 1200px)">
-              <source srcset="<%= require('../images/iSara-m.png') %>" media="(min-width: 839px)">
-              <source srcset="<%= require('../images/iSara-s.png') %>" media="(min-width: 600px)">
-              <img srcset="<%= require('../images/iSara-m.png') %>" alt="isaraLP" class="works__image">
-            </picture>
+          <a href="<%= require('../images/isara.life模写制作.jpg') %>" target="_blank" rel="noopener noreferrer">
+            <figure>
+              <img src="<%= require('../images/iSara-s.jpg') %>" alt="isaraLP" class="works__image">
+            </figure>
           </a>
           <h2 class="works__title">＜isara.life模写制作LP＞</h2>
           <p class="works__description">
@@ -276,7 +243,7 @@
                 height="12"></a>
           </p>
           <div class="btn btn--works">
-            <a href="<%= require('../images/isara.life模写制作.png') %>" target="_blank"
+            <a href="<%= require('../images/isara.life模写制作.jpg') %>" target="_blank"
               rel="noopener noreferrer">全体を確認する</a>
           </div>
         </div>
@@ -284,12 +251,9 @@
         <!-- Fiction University -->
         <div class="works__item">
           <a href="http://kyoyao.sg-host.com/" target="_blank" rel="noopener noreferrer">
-            <picture>
-              <source srcset="<%= require('../images/fictional-university-l.png') %>" media="(min-width: 1200px)">
-              <source srcset="<%= require('../images/fictional-university-m.png') %>" media="(min-width: 947px)">
-              <source srcset="<%= require('../images/fictional-university-s.png') %>" media="(min-width: 600px)">
-              <img srcset="<%= require('../images/fictional-university-m.png') %>" alt="仮想大学画像" class="works__image">
-            </picture>
+            <figure>
+              <img src="<%= require('../images/fictional-university-s.jpg') %>" alt="仮想大学画像" class="works__image">
+            </figure>
           </a>
           <h2 class="works__title">＜Fictional University＞</h2>
           <p class="works__description">Brad
