@@ -16,6 +16,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="<%= require('../images/favicon.png') %>">
   <link rel="apple-touch-icon" sizes="180x180" href="<%= require('../images/favicon.png') %>">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
   <title>KYOYA DEV PORTFOLIO</title>
   <meta name="description" content="ノマドWeb制作フリーランスKYOYA DEVのポートフォリオサイトです">
   <script src=" https://sdk.form.run/js/v2/formrun.js">
@@ -173,7 +175,7 @@
 
         <!-- KYOYA DEV -->
         <div class="works__item">
-          <a href="" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <figure>
               <img src="<%= require('../images/KYOYA-DEV-PORTFOLIO-s.jpg') %>" alt="KYOYA DEV画像" class="works__image">
             </figure>
@@ -184,10 +186,28 @@
             環境で公開しています。これからもさらなる改善に努めていく予定です。
           </p>
           <div class="btn btn--works">
-            <a href="https://github.com/KYOYA-OGA/portfolio" target="_blank"
-              rel="noopener noreferrer">Githubでコードを確認する</a>
+            <a href="https://github.com/KYOYA-OGA/portfolio" target="_blank" rel="noopener noreferrer">Githubでコードを確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
+
+        <!-- Web制作日記 -->
+        <div class="works__item">
+          <a href="https://kyoyadev.com/" target="_blank" rel="noopener noreferrer">
+            <figure>
+              <img src="<%= require('../images/myBlog.png') %>" alt="ゆるゆるWeb制作日記" class="works__image">
+            </figure>
+          </a>
+          <h2 class="works__title">＜ゆるゆるWeb制作日記＞</h2>
+          <p class="works__description">
+            新しい技術へのキャッチアップのためにも、近年注目されている静的サイトジェネレーターのGatsby
+            jsを用いてブログを書き始めました。Jamstack構成の開発体験の心地良さを実感しながら日々技術の向上に努めています。 </p>
+          <div class="btn btn--works">
+            <a href="https://kyoyadev.com/" target="_blank" rel="noopener noreferrer">Webサイトで確認する<i
+                class="fas fa-external-link-alt"></i></a>
+          </div>
+        </div>
+
 
 
         <!-- Nexter -->
@@ -201,10 +221,12 @@
           <p class="works__description">Jonas
             Schmedtmann氏のコースの題材となります。特徴的な写真の散りばめはCSSグリッドを用いることで可能にしています。シンプルながらもラグジュアリー感を演出する実装です。</p>
           <div class="btn btn--works">
-            <a href="https://nexter-demo.netlify.app/" target="_blank" rel="noopener noreferrer">Webサイトで確認する</a>
+            <a href="https://nexter-demo.netlify.app/" target="_blank" rel="noopener noreferrer">Webサイトで確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
           <div class="btn btn--works">
-            <a href="https://github.com/KYOYA-OGA/Nexter" target="_blank" rel="noopener noreferrer">Githubでコードを確認する</a>
+            <a href="https://github.com/KYOYA-OGA/Nexter" target="_blank" rel="noopener noreferrer">Githubでコードを確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
@@ -219,10 +241,12 @@
           <p class="works__description">Jonas
             Schmedtmann氏のコースの題材となります。躍動感と遊び心に溢れたLPで、すべてのアニメーションがCSSで作られています。ぜひ実際のWebサイトで様々なアクションをお試しください。</p>
           <div class="btn btn--works">
-            <a href="https://natours-oga.netlify.app/" target="_blank" rel="noopener noreferrer">Webサイトで確認する</a>
+            <a href="https://natours-oga.netlify.app/" target="_blank" rel="noopener noreferrer">Webサイトで確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
           <div class="btn btn--works">
-            <a href="https://github.com/KYOYA-OGA/Natours" target="_blank" rel="noopener noreferrer">Githubでコードを確認する</a>
+            <a href="https://github.com/KYOYA-OGA/Natours" target="_blank" rel="noopener noreferrer">Githubでコードを確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
@@ -243,14 +267,14 @@
                 height="12"></a>
           </p>
           <div class="btn btn--works">
-            <a href="<%= require('../images/isara.life模写制作.jpg') %>" target="_blank"
-              rel="noopener noreferrer">全体を確認する</a>
+            <a href="<%= require('../images/isara.life模写制作.jpg') %>" target="_blank" rel="noopener noreferrer">全体を確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 
         <!-- Fiction University -->
         <div class="works__item">
-          <a href="http://kyoyao.sg-host.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://kyoyadev.xyz/" target="_blank" rel="noopener noreferrer">
             <figure>
               <img src="<%= require('../images/fictional-university-s.jpg') %>" alt="仮想大学画像" class="works__image">
             </figure>
@@ -260,7 +284,8 @@
             Schiff氏のコースの題材で、WordPressにて構築されています。完全オリジナルテーマで、カスタムクエリやカスタム投稿タイプのみならず、GoogleマップAPIとの連携やJavaScriptとWordPress
             REST APIを組み合わせたライブサーチなどを実装しています。</p>
           <div class="btn btn--works">
-            <a href="http://kyoyao.sg-host.com/" target="_blank" rel="noopener noreferrer">Webサイトで確認する</a>
+            <a href="https://kyoyadev.xyz/" target="_blank" rel="noopener noreferrer">Webサイトで確認する<i
+                class="fas fa-external-link-alt"></i></a>
           </div>
         </div>
 

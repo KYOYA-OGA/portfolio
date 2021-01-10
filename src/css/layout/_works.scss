@@ -45,6 +45,11 @@
     &:hover {
       transform: scale(1.05);
       box-shadow: 3px 3px 20px $color-grey-dark-2;
+
+      @include respond(tab-land) {
+        transform: none;
+        box-shadow: 0.5px 0.5px 5px $color-grey-dark-2;
+      }
     }
 
     & a {
@@ -82,4 +87,10 @@
     margin: 0 auto;
     font-size: $font-default;
   }
+}
+
+.fa-external-link-alt {
+  margin-left: 5px;
+  vertical-align: middle;
+  font-size: $font-small;
 }

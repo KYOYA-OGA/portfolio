@@ -5,7 +5,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   // devtool: 'eval-source-map',
   entry: './src/js/main.js',
   output: {
@@ -17,7 +17,6 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist/html'),
     // publicPath: '/dist/',
     open: true,
-    // hot: true,
     port: 3000,
     useLocalIp: true,
     host: '0.0.0.0',

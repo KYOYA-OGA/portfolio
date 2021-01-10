@@ -19,7 +19,7 @@
     }
 
     & a {
-      font-size: $font-medium;
+      font-size: $font-default;
       color: #fff;
       text-decoration: none;
       line-height: 6rem;
@@ -30,7 +30,6 @@
 
       @include respond(tab-port) {
         line-height: 5rem;
-        font-size: $font-default;
       }
     }
   }
@@ -67,18 +66,21 @@
   &--works {
     margin: 2rem auto;
     height: 4rem;
+    padding: 0 2rem;
     width: 80%;
     transition: all 0.3s ease-in-out;
     box-shadow: none;
     display: block;
+    background-color: $color-grey-light;
+    & a {
+      color: $color-grey-dark-1;
+    }
 
-    &:hover,
-    &:focus {
+    &:hover {
       background-color: rgba(#000, 0.05);
-      box-shadow: 0 5px 5px rgba($color-black, 0.2);
 
       & a {
-        color: $color-secondary;
+        color: $color-grey-dark-1;
       }
     }
     & a {
@@ -115,6 +117,11 @@
       box-shadow: 0 10px 10px rgba($color-black, 0.2);
       color: $color-secondary;
       transform: scale(1.05);
+
+      @include respond(tab-land) {
+        box-shadow: none;
+        transform: none;
+      }
     }
   }
 }
